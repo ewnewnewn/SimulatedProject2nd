@@ -1,0 +1,24 @@
+.menu-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: none;
+    background: none;
+}
+
+.modal-header {
+    border: none;
+    padding: 0;
+}
+
+.close {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 15px;
+    z-index: 1;
+}
+
+.modal-body {
+    text-align: center;
+}
