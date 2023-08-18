@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rese</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/sanitize.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 
 <body>
     <header class="header">
         <div class="container">
             <button data-toggle="modal" data-target="#menuModal" class="menu-button">
-                <img src="{{ asset('images/menu.png') }}" alt="メニュー">
+                <img src="{{ asset('img/menu.svg') }}">
+                <span class="menu-text">Rese</span>
             </button>
 
             <div class="modal fade" id="menuModal" tabindex="-1" aria-hidden="true">
@@ -42,7 +45,11 @@
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         
         </div>
+        @yield('header')
+
     </header>
+
+    <div class="interval"></div>
 
     <main>
         @yield('content')

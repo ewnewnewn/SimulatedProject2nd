@@ -13,5 +13,10 @@ use App\Http\Controllers\ReservationController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/login', function () {return view('auth.Login');});
+Route::get('/register', function () {return view('auth.Register');});
+Route::get('/thanks', function () {return view('RegisterDone');});
+Route::get('/done', function () {return view('ReservationDone');});
+Route::get('/mypage', function () {return view('Mypage');});
+Route::get('/', function () {return view('ShopAll');});
 
-Route::get('/', [ReservationController::class,'test']);

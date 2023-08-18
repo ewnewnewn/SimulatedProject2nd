@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reservations {
+    width: 48%;
+}
+
+.reservation {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.checkmark {
+    font-size: 20px;
+}
+
+.cancel-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.favorites .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.favorites .card {
+    width: 48%;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e5e5e5;
+}
+
+.favorites .card img {
+    width: 100%;
+}
+
+.favorites .detail-button {
+    color: #007bff;
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid #007bff;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.favorites .favorite-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+}
+
+.details p {
+    margin: 5px 0;
+}
