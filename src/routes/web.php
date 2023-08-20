@@ -17,19 +17,17 @@ use App\Http\Controllers\ReservationController;
 */
 
 //テスト
-//Route::get('/login', function () {return view('auth.Login');});
-Route::get('/login', function () { return view('auth.Login'); })->name('login');
-Route::get('/register', function () {return view('auth.Register');});
-Route::get('/thanks', function () {return view('RegisterDone');});
-Route::get('/done', function () {return view('ReservationDone');});
-Route::get('/mypage', function () {return view('Mypage');});
-
+Route::get('/thanks', function () {return view('ReservationDone');});
 
 
 //以下は実装済み
+//Route::get('/login', function () { return view('auth.Login'); })->name('login');
+Route::get('/login',[AuthController::class,'login'])->name('login');
+Route::get('/register',[AuthController::class,'register']);
+
 Route::middleware('auth')->group(function () {
     Route::get('/',[ShopController::class,'shopAll']);
-    }
-);
-
+    Route::get('/mypage', function () {return view('Mypage');});
+});
 Route::post('/logout',[AuthController::class,'logout']);
+Route::post('/register',[AuthController::class,'registerDone']);

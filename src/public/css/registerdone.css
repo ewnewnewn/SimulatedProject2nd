@@ -1,0 +1,47 @@
+/* 全体の背景色をオフホワイトに設定 */
+body {
+    background-color: #f5f5f5;
+}
+
+/* お礼カードのスタイル */
+.thanks-card {
+    width: 33%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    /* メニュー画面の角を丸める */
+}
+
+/* お礼メッセージのスタイル */
+.thanks-message__content {
+    color: black;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+/* ログインボタンのスタイル */
+.login-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-button__submit {
+    color: white;
+    background-color: blue;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    /* 文字の折り返しを防ぐ */
+}
+
+.login-button__submit:hover {
+    background-color: darkblue;
+}

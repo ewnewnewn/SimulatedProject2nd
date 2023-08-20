@@ -3,7 +3,7 @@
 @section('css')
     <link 
         rel="stylesheet" 
-        href="{{ asset('css/date.css') }}"
+        href="{{ asset('css/registerdone.css') }}"
     >
 @endsection
 
@@ -13,7 +13,7 @@
             <span class="thanks-message__content">会員登録ありがとうございます</span>
         </div>
         <div class="login-button">
-            <form action="" class="login-button__form" method="GET">
+            <form action="/login" class="login-button__form" method="GET">
                 @csrf
                 <button class="login-button__submit">
                     ログインする
