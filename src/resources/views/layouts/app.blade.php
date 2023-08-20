@@ -14,7 +14,7 @@
     <header class="header">
         <div class="container">
             <button data-toggle="modal" data-target="#menuModal" class="menu-button">
-                <img src="{{ asset('img/menu.svg') }}">
+                <img src="{{ asset('img/icon_img/menu.svg') }}">
                 <span class="menu-text">Rese</span>
             </button>
 
@@ -29,8 +29,11 @@
                         <div class="modal-body">
                             <a href="{{ url('/') }}">Home</a><br>
                             @if(Auth::check())
-                                <a href="{{ url('/register') }}">Logout</a><br>
-                                <a href="{{ url('/login') }}">Mypage</a>
+                                <form action="{{ url('/logout') }}" method="POST" id="logout-form">
+                                    @csrf
+                                    <a href="#" onclick="document.getElementById('logout-form').submit();">Logout</a>
+                                </form>
+                                <a href="{{ url('/mypage') }}">Mypage</a>
                             @else
                                 <a href="{{ url('/register') }}">Registration</a><br>
                                 <a href="{{ url('/login') }}">Login</a>

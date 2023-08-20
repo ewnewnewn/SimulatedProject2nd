@@ -27,7 +27,7 @@
           <div class="cards">
               @foreach($favorites as $favorite)
                   <div class="card">
-                      <img src="{{ asset('images/' . $favorite->shop->image) }}" alt="{{ $favorite->shop->name }}">
+                      <img src="{{ asset('images/icon_img' . $favorite->shop->image) }}" alt="{{ $favorite->shop->name }}">
                       <h3>{{ $favorite->shop->name }}</h3>
                       <p>#{{ $favorite->shop->area }} #{{ $favorite->shop->genre }}</p>
                       <a href="{{ url('/detail/' . $favorite->shop->id) }}" class="detail-button">店舗詳細</a>

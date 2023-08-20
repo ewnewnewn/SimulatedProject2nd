@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ReservationController;
 
 /*
@@ -13,10 +15,21 @@ use App\Http\Controllers\ReservationController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/login', function () {return view('auth.Login');});
+
+//テスト
+//Route::get('/login', function () {return view('auth.Login');});
+Route::get('/login', function () { return view('auth.Login'); })->name('login');
 Route::get('/register', function () {return view('auth.Register');});
 Route::get('/thanks', function () {return view('RegisterDone');});
 Route::get('/done', function () {return view('ReservationDone');});
 Route::get('/mypage', function () {return view('Mypage');});
-Route::get('/', function () {return view('ShopAll');});
 
+
+
+//以下は実装済み
+Route::middleware('auth')->group(function () {
+    Route::get('/',[ShopController::class,'shopAll']);
+    }
+);
+
+Route::post('/logout',[AuthController::class,'logout']);

@@ -1,0 +1,78 @@
+/* レジスタページ全体の背景色 */
+body {
+    background-color: #f5f5f5;
+}
+
+/* レジスタフォームを中央に配置し、画面幅の1/3の大きさに設定 */
+.register {
+    width: 33%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    /* メニュー画面の角を丸める */
+}
+
+/* register__titleを白文字、青背景でメニューの横幅いっぱいに設定 */
+.register__title {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0 -20px 20px;
+    /* パディング分のマイナスマージンで横幅いっぱいにする */
+}
+
+/* フォーム内のアイテムスタイル */
+.register-form__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* フォーム内のアイテム画像 */
+.register-form__item img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+/* フォーム内の入力フィールド */
+.register-form__item-input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+    /* 下線に */
+}
+
+/* フォーム内のボタンの文字色と背景色を設定し、メニューの1/4の大きさに */
+.register-form__button {
+    width: 25%;
+    text-align: right;
+}
+
+.register-form__button-submit {
+    color: white;
+    background-color: blue;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.register-form__button-submit:hover {
+    background-color: darkblue;
+}
+
+/* エラーメッセージのスタイル */
+.alert-danger {
+    color: red;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding: 15px;
+    margin: 20px 0;
+}
