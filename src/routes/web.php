@@ -16,18 +16,16 @@ use App\Http\Controllers\ReservationController;
 |
 */
 
-//テスト
-Route::get('/thanks', function () {return view('ReservationDone');});
-
-
 //以下は実装済み
-//Route::get('/login', function () { return view('auth.Login'); })->name('login');
 Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::get('/register',[AuthController::class,'register']);
+Route::get('/thanks', [AuthController::class,'registerDone']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/',[ShopController::class,'shopAll']);
     Route::get('/mypage', function () {return view('Mypage');});
 });
+
+
 Route::post('/logout',[AuthController::class,'logout']);
-Route::post('/register',[AuthController::class,'registerDone']);
+Route::post('/register',[AuthController::class,'registerAndRedirect']);

@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Shop;
 
 class ShopController extends Controller
 {
     public function shopAll()
     {
-        return view('test');
+        $shops=Shop::all();
+        return view('ShopAll',['shops'=> $shops]);
+        
     }
 
 }
