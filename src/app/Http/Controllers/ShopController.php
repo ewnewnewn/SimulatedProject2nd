@@ -14,4 +14,10 @@ class ShopController extends Controller
         
     }
 
+    public function showDetail($shop_id)
+    {
+        $shop = Shop::find($shop_id);
+        return view('shopdetail', compact('shop'));
+    }
+    
 }

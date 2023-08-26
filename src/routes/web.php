@@ -23,6 +23,7 @@ Route::get('/thanks', [AuthController::class,'registerDone']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/',[ShopController::class,'shopAll']);
+    Route::get('/detail/{shop_id}', [ShopController::class,'showDetail'])->name('shop.detail');
     Route::get('/mypage', function () {return view('Mypage');});
 });
 
