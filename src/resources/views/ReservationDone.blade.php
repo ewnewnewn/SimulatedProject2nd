@@ -3,7 +3,7 @@
 @section('css')
     <link 
         rel="stylesheet" 
-        href="{{ asset('css/date.css') }}"
+        href="{{ asset('css/reservationdone.css') }}"
     >
 @endsection
 
@@ -13,7 +13,7 @@
             <span class="reservation-message__content">ご予約ありがとうございます</span>
         </div>
         <div class="buck-button">
-            <form action="" class="buck-button__form" method="GET">
+            <form action="/" class="buck-button__form" method="GET">
                 @csrf
                 <button class="buck-button__submit">
                     戻る

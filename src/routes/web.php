@@ -20,6 +20,8 @@ use App\Http\Controllers\ReservationController;
 Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::get('/register',[AuthController::class,'register']);
 Route::get('/thanks', [AuthController::class,'registerDone']);
+Route::get('/done', [ReservationController::class,'reservationDone']);
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/',[ShopController::class,'shopAll']);
@@ -29,4 +31,5 @@ Route::middleware('auth')->group(function () {
 
 
 Route::post('/logout',[AuthController::class,'logout']);
+Route::post('/reservation/{shop}', [ReservationController::class,'store'])->name('reservation.store');
 Route::post('/register',[AuthController::class,'registerAndRedirect']);

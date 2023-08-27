@@ -4,18 +4,17 @@ body {
 }
 
 /* お礼カードのスタイル */
-.thanks-card {
+.reservation-card {
     width: 33%;
     margin: 0 auto;
     background-color: white;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    /* メニュー画面の角を丸める */
 }
 
 /* お礼メッセージのスタイル */
-.thanks-message__content {
+.reservation-message__content {
     color: black;
     padding: 10px;
     display: block;
@@ -24,13 +23,13 @@ body {
     margin: 20px 0;
 }
 
-/* ログインボタンのスタイル */
-.login-button {
+/* 戻るボタンのスタイル */
+.buck-button {
     text-align: center;
     margin-top: 20px;
 }
 
-.login-button__submit {
+.buck-button__submit {
     color: white;
     background-color: blue;
     padding: 10px 20px;
@@ -39,9 +38,8 @@ body {
     font-size: 1em;
     transition: background-color 0.3s;
     white-space: nowrap;
-    /* 文字の折り返しを防ぐ */
 }
 
-.login-button__submit:hover {
+.buck-button__submit:hover {
     background-color: darkblue;
 }
