@@ -1,0 +1,130 @@
+/* shopdetail.css */
+
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    /* 全体の余白を追加 */
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    /* コンテンツ間の余白を追加 */
+}
+
+/* 左側のコンテンツ */
+.left-content {
+    flex: 1;
+    padding: 20px;
+    /* 内側の余白を追加 */
+}
+
+.left-header {
+    display: flex;
+    /* 横並びにする */
+    align-items: center;
+    /* 垂直方向に中央揃え */
+    justify-content: flex-start;
+    /* 左詰めに変更 */
+    margin-bottom: 20px;
+}
+
+.left-header a {
+    text-decoration: none;
+    background-color: #fff;
+    /* ボタンの背景色 */
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.left-header a:hover {
+    background-color: #0056b3;
+    /* ホバー時の背景色 */
+}
+
+.left-header h1 {
+    margin: 0;
+    margin-left: 10px;
+    /* 名前との間隔を追加 */
+}
+
+.shop-image img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    /* 画面幅の25%に中央寄せ */
+    display: block;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.shop-details p {
+    margin: 5px 0;
+}
+
+/* 右側のコンテンツ */
+.right-content {
+    flex: 1;
+    padding: 20px;
+    /* 内側の余白を追加 */
+    background-color: #007bff;
+    /* 背景色を青色に */
+    color: #fff;
+    /* テキストの色を白に設定 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* 上詰めに変更 */
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+form {
+    margin-top: 0;
+    /* 余白を削除 */
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="date"],
+form input[type="time"],
+form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+form button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.confirmation {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}

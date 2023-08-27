@@ -17,8 +17,10 @@
             <img src="{{ asset('img/shop_img/' . $shop->image_path) }}" alt="{{ $shop->name }}">
             <h2>{{ $shop->name }}</h2>
             <p>#{{ $shop->area }} #{{ $shop->genre }}</p>
-            <a href="{{ url('/detail/' . $shop->id) }}" class="detail-button">詳しくみる</a>
-            <button class="favorite-button">❤</button>
+            <div class="cards_detail-favorite_button">
+                <a href="{{ url('/detail/' . $shop->id) }}" class="detail-button">詳しくみる</a>
+                <button class="favorite-button">❤</button>
+            </div>
         </div>
     @endforeach
     </div>

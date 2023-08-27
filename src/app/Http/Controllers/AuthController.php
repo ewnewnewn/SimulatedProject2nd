@@ -32,8 +32,6 @@ class AuthController extends Controller
     public function registerAndRedirect(CreateNewUser $creator, Request $request)
     {
         $user = $creator->create($request->all());
-
-        // ユーザー登録が完了したら、/thanks へリダイレクト
         return redirect('/thanks');
     }
 }

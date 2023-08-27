@@ -36,6 +36,9 @@ header input {
     width: 100%;
 }
 
+.cards_detail-favorite_button {
+    display: flex;
+}
 
 .detail-button,
 .favorite-button {
